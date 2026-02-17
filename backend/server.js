@@ -14,7 +14,7 @@ const { Server } = require('socket.io');
 
 const port = process.env.PORT || 5001;
 
-connectDB();
+
 
 const app = express();
 
@@ -106,4 +106,18 @@ io.on('connection', (socket) => {
 });
 
 // Start server
-server.listen(port, () => console.log(`Server + Socket.IO started on port ${port}`));
+// Start server function
+const startServer = async () => {
+  try {
+    // Connect to Database first
+    await connectDB();
+    
+    // Then start listening
+    server.listen(port, () => console.log(`Server + Socket.IO started on port ${port}`));
+  } catch (error) {
+    console.error('Failed to connect to database:', error);
+    process.exit(1);
+  }
+};
+
+startServer();
