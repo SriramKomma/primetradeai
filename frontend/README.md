@@ -95,7 +95,7 @@ Start the frontend:
 npm start
 ```
 
-The app will be available at `http://localhost:3000`.
+The app will be available at `https://primetradeai-dowf.vercel.app` (or locally at `http://localhost:3000`).
 
 ## API Overview
 

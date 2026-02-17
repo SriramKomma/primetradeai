@@ -56,7 +56,7 @@ This project implements a full-stack task management dashboard with robust authe
    npm start
    ```
 
-The application will be available at `http://localhost:3000`.
+The application will be available at `https://primetradeai-dowf.vercel.app` (or locally at `http://localhost:3000`).
 
 ## 📚 Documentation
 
